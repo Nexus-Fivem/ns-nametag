@@ -29,22 +29,22 @@ body {
 
 .nametag {
     display: flex;
-    position: relative; /* Add this to create a positioning context for the triangle */
+    position: relative;
 }
 
 .nametag_playerid {
     font-size: 5vh;
     color: rgb(121, 121, 121);
     font-weight: 800;
-    mix-blend-mode: difference; /* Bu satır yazı rengini arka plana göre ayarlıyor */
+    mix-blend-mode: difference;
     padding: 0vh 3vh;
     background-color: var(--beyaz);
 }
 
 .nametag_playername {
-    white-space: nowrap; /* Yazının tek satırda kalmasını sağlar */
-    overflow: hidden; /* Taşan yazının görünmesini engeller */
-    text-overflow: ellipsis; /* Yazı kesildiğinde üç nokta (...) ekler */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: center;
     max-width: 30vh;
     max-height: 6vh;
@@ -57,14 +57,14 @@ body {
     background-image: var(--waves);
     border: 3px solid rgb(255, 255, 255);
     border-left: none;
-    letter-spacing: 2px; /* Harfler arası boşluk (2 piksel) */
+    letter-spacing: 2px; 
 }
 
 .nametag_triangle {
     position: absolute;
-    top: 115%; /* Position it directly below the nametag */
-    left: 50%; /* Align it to the center */
-    transform: translate(-50%, 0); /* Center it horizontally below the nametag */
+    top: 115%; 
+    left: 50%; 
+    transform: translate(-50%, 0); 
     width: 0px;
     height: 0px;
     border-style: solid;
