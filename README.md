@@ -1,4 +1,6 @@
 # ns-nametag
+
+## [To Get Support](https://nexusdev.online)
 Name Tag Script By Nexus
 
 ![image](https://github.com/user-attachments/assets/01fbf6e8-ba06-46e3-b650-cbe9d0430fcc)
