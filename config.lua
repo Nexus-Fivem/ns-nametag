@@ -2,7 +2,7 @@ Config = {}
 
 Config.Distance = 50
 
-Config.DisplayName = true -- If you are using ESX or QBCore
+Config.DisplayName = true -- If you are using ESX or QBCore, true if you want display character name
 Config.Framework = "QBCore" -- QBCore or ESX
 Config.Surname = false -- true if you want display surname too
 
