@@ -4,7 +4,7 @@ CreateThread(function()
     local playerId = PlayerId()
     local playerName = GetPlayerName(playerId)
     local name = nil
-    if Config.DisplayName then 
+    if Config.DisplayCharName then 
         if Config.Framework == "QBCore" then
             Wait(100)
             local QBCore = exports['qb-core']:GetCoreObject()
