@@ -3,7 +3,34 @@ local playerNames = {}
 CreateThread(function()
     local playerId = PlayerId()
     local playerName = GetPlayerName(playerId)
+    local name = nil
+    if Config.DisplayName then 
+        if Config.Framework == "QBCore" then
+            Wait(100)
+            local QBCore = exports['qb-core']:GetCoreObject()
+            local PlayerData = QBCore.Functions.GetPlayerData()
+            if Config.Surname then
+                name = PlayerData.charinfo.firstname.." "..PlayerData.charinfo.lastname
+                print(name)
+            else 
+                name = PlayerData.charinfo.firstname
+                print(name)
+            end
+            print(name)
+            TriggerServerEvent('nametag:setPlayerName', name)
+        elseif Config.Framework == "ESX" then
+            local ESX = exports["es_extended"]:getSharedObject()
+            local PlayerData = ESX.GetPlayerData()
+            if Config.Surname then
+                name = PlayerData.firstName.." "..PlayerData.lastName
+            else 
+                name = PlayerData.firstName
+            end
+        TriggerServerEvent('nametag:setPlayerName', name)
+        end
+    else
     TriggerServerEvent('nametag:setPlayerName', playerName)
+    end
 end)
 
 RegisterNetEvent('nametag:updateNames')
