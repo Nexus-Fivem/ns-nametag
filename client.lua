@@ -11,12 +11,9 @@ CreateThread(function()
             local PlayerData = QBCore.Functions.GetPlayerData()
             if Config.Surname then
                 name = PlayerData.charinfo.firstname.." "..PlayerData.charinfo.lastname
-                print(name)
             else 
                 name = PlayerData.charinfo.firstname
-                print(name)
             end
-            print(name)
             TriggerServerEvent('nametag:setPlayerName', name)
         elseif Config.Framework == "ESX" then
             local ESX = exports["es_extended"]:getSharedObject()
